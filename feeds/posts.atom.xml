@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ryan's Data Science Blog - posts</title><link href="http://ruer98.github.io/" rel="alternate"></link><link href="http://ruer98.github.io/feeds/posts.atom.xml" rel="self"></link><id>http://ruer98.github.io/</id><updated>2018-08-28T14:00:00-05:00</updated><entry><title>First Post</title><link href="http://ruer98.github.io/first-post.html" rel="alternate"></link><published>2018-08-28T14:00:00-05:00</published><updated>2018-08-28T14:00:00-05:00</updated><author><name>Ryan Rue</name></author><id>tag:ruer98.github.io,2018-08-28:/first-post.html</id><summary type="html">&lt;p&gt;My first post&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ryan's Data Science Blog - posts</title><link href="http://ruer98.github.io/" rel="alternate"></link><link href="http://ruer98.github.io/feeds/posts.atom.xml" rel="self"></link><id>http://ruer98.github.io/</id><updated>2018-08-28T14:00:00-05:00</updated><entry><title>First Post</title><link href="http://ruer98.github.io/posts/first-post.html" rel="alternate"></link><published>2018-08-28T14:00:00-05:00</published><updated>2018-08-28T14:00:00-05:00</updated><author><name>Ryan Rue</name></author><id>tag:ruer98.github.io,2018-08-28:/posts/first-post.html</id><summary type="html">&lt;p&gt;My first post&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
@@ -975,44 +975,32 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="First-post!"&gt;First post!&lt;a class="anchor-link" href="#First-post!"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;
+&lt;h1 id="First-post!"&gt;First post!&lt;a class="anchor-link" href="#First-post!"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[1]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [1]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;hello world&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'hello world'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div class="output_wrapper"&gt;
 &lt;div class="output"&gt;
-
-
 &lt;div class="output_area"&gt;
-
 &lt;div class="prompt"&gt;&lt;/div&gt;
-
-
 &lt;div class="output_subarea output_stream output_stdout output_text"&gt;
 &lt;pre&gt;hello world
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;/div&gt;
- 
-
-
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var mathjaxscript = document.createElement('script');
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
