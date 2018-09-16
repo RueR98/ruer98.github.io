@@ -1095,7 +1095,7 @@ h6:hover .anchor-link {
         text-align: right;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table-hover table table-striped dataframe"&gt;
+&lt;table border="1" class="table-striped dataframe table table-hover"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -1194,7 +1194,7 @@ h6:hover .anchor-link {
         text-align: right;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table-hover table table-striped dataframe"&gt;
+&lt;table border="1" class="table-striped dataframe table table-hover"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -1286,7 +1286,7 @@ h6:hover .anchor-link {
         text-align: right;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table-hover table table-striped dataframe"&gt;
+&lt;table border="1" class="table-striped dataframe table table-hover"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -1425,7 +1425,7 @@ h6:hover .anchor-link {
         text-align: right;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table-hover table table-striped dataframe"&gt;
+&lt;table border="1" class="table-striped dataframe table table-hover"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -2590,7 +2590,7 @@ h6:hover .anchor-link {
 &lt;p&gt;&lt;strong&gt;The training set&lt;/strong&gt; is used to build my machine learning models. For the training set, I am provided the outcome (or "ground truth") for each passenger.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;The test set&lt;/strong&gt; is used to see how well my model performs on unseen data. The ground truth is not provided, so it is my job to predict these outcomes.&lt;/p&gt;
 &lt;p&gt;There's also &lt;strong&gt;gender_submission.csv&lt;/strong&gt;, a set of predictions that assume all and only female passengers survive, as an example of what a submission file should look like.&lt;/p&gt;
-&lt;h1 id="Data-Dictionary"&gt;Data Dictionary&lt;a class="anchor-link" href="#Data-Dictionary"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;table class="table-hover table table-striped"&gt;
+&lt;h1 id="Data-Dictionary"&gt;Data Dictionary&lt;a class="anchor-link" href="#Data-Dictionary"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;table class="table-striped table table-hover"&gt;
 &lt;thead&gt;&lt;tr&gt;
 &lt;th&gt;Variable&lt;/th&gt;
 &lt;th&gt;Definition&lt;/th&gt;
@@ -2737,7 +2737,7 @@ Some children travelled only with a nanny, therefore parch=0 for them.&lt;/p&gt;
         text-align: right;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table-hover table table-striped dataframe"&gt;
+&lt;table border="1" class="table-striped dataframe table table-hover"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -2915,7 +2915,7 @@ memory usage: 83.6+ KB
         text-align: right;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table-hover table table-striped dataframe"&gt;
+&lt;table border="1" class="table-striped dataframe table table-hover"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -3566,7 +3566,7 @@ memory usage: 83.6+ KB
         text-align: right;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table-hover table table-striped dataframe"&gt;
+&lt;table border="1" class="table-striped dataframe table table-hover"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -3724,7 +3724,7 @@ dtype: object&lt;/pre&gt;
         text-align: right;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table-hover table table-striped dataframe"&gt;
+&lt;table border="1" class="table-striped dataframe table table-hover"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -3913,7 +3913,7 @@ dtype: object&lt;/pre&gt;
         text-align: right;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table-hover table table-striped dataframe"&gt;
+&lt;table border="1" class="table-striped dataframe table table-hover"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -4074,7 +4074,7 @@ dtype: object&lt;/pre&gt;
         text-align: right;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table-hover table table-striped dataframe"&gt;
+&lt;table border="1" class="table-striped dataframe table table-hover"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -4211,7 +4211,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
         text-align: right;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table-hover table table-striped dataframe"&gt;
+&lt;table border="1" class="table-striped dataframe table table-hover"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -4406,7 +4406,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
         text-align: right;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table-hover table table-striped dataframe"&gt;
+&lt;table border="1" class="table-striped dataframe table table-hover"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -4488,7 +4488,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
         text-align: right;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table-hover table table-striped dataframe"&gt;
+&lt;table border="1" class="table-striped dataframe table table-hover"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
