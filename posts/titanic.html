@@ -1056,15 +1056,15 @@ h6:hover .anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Today, I tackle the famous Titanic dataset for my first Kaggle competition!</p>
 <h1 id="Kaggle-Machine-Learning-Competition:-Predicting-Titanic-Survivors">Kaggle Machine Learning Competition: Predicting Titanic Survivors<a class="anchor-link" href="#Kaggle-Machine-Learning-Competition:-Predicting-Titanic-Survivors">¶</a></h1><p><a href="https://www.kaggle.com/c/titanic">https://www.kaggle.com/c/titanic</a></p>
-<p><img alt="alt" class="img-fluid" img="" src="titanic.jpg"/></p>
+<p><img class="img-fluid" src="titanic.jpg"/></p>
 <h2 id="Competition-Description">Competition Description<a class="anchor-link" href="#Competition-Description">¶</a></h2><p>The sinking of the RMS Titanic is one of the most infamous shipwrecks in history.  On April 15, 1912, during her maiden voyage, the Titanic sank after colliding with an iceberg, killing 1502 out of 2224 passengers and crew. This sensational tragedy shocked the international community and led to better safety regulations for ships.</p>
 <p>One of the reasons that the shipwreck led to such loss of life was that there were not enough lifeboats for the passengers and crew. Although there was some element of luck involved in surviving the sinking, some groups of people were more likely to survive than others, such as women, children, and the upper-class.</p>
 <p>In this challenge, we ask you to complete the analysis of what sorts of people were likely to survive. In particular, we ask you to apply the tools of machine learning to predict which passengers survived the tragedy.</p>
 <h2 id="About-the-Data">About the Data<a class="anchor-link" href="#About-the-Data">¶</a></h2><p>The data is split up into a training set and a test set.</p>
 <p><strong>The training set</strong> is used to build my machine learning models. For the training set, I am provided the outcome (or "ground truth") for each passenger.</p>
 <p><strong>The test set</strong> is used to see how well my model performs on unseen data. The ground truth is not provided, so it is my job to predict these outcomes.</p>
-<p>There's also <strong>gender_submission.csv</strong>, a set of predictions that assume all and only female passengers survive, as an example of what a submission file should look like.</p>
-<h1 id="Data-Dictionary">Data Dictionary<a class="anchor-link" href="#Data-Dictionary">¶</a></h1><table class="table-striped table table-hover">
+<p>There' also <strong>gender_submission.csv</strong>, a set of predictions that assume all and only female passengers survive, as an example of what a submission file should look like.</p>
+<h1 id="Data-Dictionary">Data Dictionary<a class="anchor-link" href="#Data-Dictionary">¶</a></h1><table class="table-hover table-striped table">
 <thead><tr>
 <th>Variable</th>
 <th>Definition</th>
@@ -1150,7 +1150,7 @@ Some children travelled only with a nanny, therefore parch=0 for them.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [3]:</div>
+<div class="prompt input_prompt">In [26]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -1173,7 +1173,7 @@ Some children travelled only with a nanny, therefore parch=0 for them.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [4]:</div>
+<div class="prompt input_prompt">In [27]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">train</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'train.csv'</span><span class="p">)</span>
@@ -1184,7 +1184,7 @@ Some children travelled only with a nanny, therefore parch=0 for them.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [5]:</div>
+<div class="prompt input_prompt">In [28]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">train</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
@@ -1195,7 +1195,7 @@ Some children travelled only with a nanny, therefore parch=0 for them.</p>
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[5]:</div>
+<div class="prompt output_prompt">Out[28]:</div>
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
 <style scoped="">
@@ -1211,7 +1211,7 @@ Some children travelled only with a nanny, therefore parch=0 for them.</p>
         text-align: right;
     }
 </style>
-<table border="1" class="table-striped dataframe table table-hover">
+<table border="1" class="table-hover dataframe table-striped table">
 <thead>
 <tr style="text-align: right;">
 <th></th>
@@ -1315,7 +1315,7 @@ Some children travelled only with a nanny, therefore parch=0 for them.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [6]:</div>
+<div class="prompt input_prompt">In [29]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">train</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -1355,14 +1355,14 @@ memory usage: 83.6+ KB
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>I have 5 'object' types in my data. Later on I'll turn those into dummy variables so that my algorithm works.</p>
+<p>I have 5 'object' types in my data. Later on I turn those into dummy variables so that my algorithm works.</p>
 <p>There is also a good amount of data missing in 'Age', a ton missing in 'Cabin', and 2 missing in 'Embarked'.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [7]:</div>
+<div class="prompt input_prompt">In [30]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">train</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -1373,7 +1373,7 @@ memory usage: 83.6+ KB
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[7]:</div>
+<div class="prompt output_prompt">Out[30]:</div>
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
 <style scoped="">
@@ -1389,7 +1389,7 @@ memory usage: 83.6+ KB
         text-align: right;
     }
 </style>
-<table border="1" class="table-striped dataframe table table-hover">
+<table border="1" class="table-hover dataframe table-striped table">
 <thead>
 <tr style="text-align: right;">
 <th></th>
@@ -1495,13 +1495,13 @@ memory usage: 83.6+ KB
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now that I have a decent feel for the data, I'll dive into each column to see what information I can extract.</p>
+<h2 id="Data-Visualization">Data Visualization<a class="anchor-link" href="#Data-Visualization">¶</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [8]:</div>
+<div class="prompt input_prompt">In [31]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s1">'darkgrid'</span><span class="p">)</span>
@@ -1513,9 +1513,9 @@ memory usage: 83.6+ KB
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[8]:</div>
+<div class="prompt output_prompt">Out[31]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x2269a91beb8&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1a060c67080&gt;</pre>
 </div>
 </div>
 <div class="output_area">
@@ -1532,7 +1532,7 @@ memory usage: 83.6+ KB
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>It looks like most people did not survive. Lets dive into each feature:</p>
+<p>Most people did not survive. I'll dive into each feature to see who was more likely to survive:</p>
 </div>
 </div>
 </div>
@@ -1546,7 +1546,7 @@ memory usage: 83.6+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [9]:</div>
+<div class="prompt input_prompt">In [32]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">'Survived'</span><span class="p">,</span><span class="n">hue</span><span class="o">=</span><span class="s1">'Pclass'</span><span class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">train</span><span class="p">)</span>
@@ -1557,9 +1557,9 @@ memory usage: 83.6+ KB
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[9]:</div>
+<div class="prompt output_prompt">Out[32]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x2269a9915f8&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1a0609e4978&gt;</pre>
 </div>
 </div>
 <div class="output_area">
@@ -1576,7 +1576,7 @@ memory usage: 83.6+ KB
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>It seems that passenger class is pretty significant to if a passenger survived or not. Those in third class had a very low chance for survival.</p>
+<p>Passenger class is pretty significant to if a passenger survived or not. Those in third class had a very low chance for survival in comparison to first and second class.</p>
 </div>
 </div>
 </div>
@@ -1590,7 +1590,7 @@ memory usage: 83.6+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [10]:</div>
+<div class="prompt input_prompt">In [33]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">'Survived'</span><span class="p">,</span><span class="n">hue</span><span class="o">=</span><span class="s1">'Sex'</span><span class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">train</span><span class="p">)</span>
@@ -1601,9 +1601,9 @@ memory usage: 83.6+ KB
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[10]:</div>
+<div class="prompt output_prompt">Out[33]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x2269aa5de48&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1a060d08470&gt;</pre>
 </div>
 </div>
 <div class="output_area">
@@ -1620,7 +1620,7 @@ memory usage: 83.6+ KB
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Sex also seems to be a very important factor for survival</p>
+<p>Sex also seems to be a very important factor for survival. Females were very likely to live while males did not fare too well.</p>
 </div>
 </div>
 </div>
@@ -1634,7 +1634,7 @@ memory usage: 83.6+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [11]:</div>
+<div class="prompt input_prompt">In [34]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">train</span><span class="p">[</span><span class="s1">'Age'</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span><span class="n">edgecolor</span><span class="o">=</span><span class="s1">'black'</span><span class="p">)</span>
@@ -1645,9 +1645,9 @@ memory usage: 83.6+ KB
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[11]:</div>
+<div class="prompt output_prompt">Out[34]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x2269aa3eef0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1a060d4e898&gt;</pre>
 </div>
 </div>
 <div class="output_area">
@@ -1664,7 +1664,7 @@ memory usage: 83.6+ KB
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We saw earlier that the mean age was around 30. This graph shows that the bulk of people are aged between 20-40 with a good chunk of babies on board.</p>
+<p>We saw earlier that the mean age was around 30 in output 6. This graph shows that the bulk of people are aged between 20-40 with a small cohort of children aged 0-16 on board.</p>
 </div>
 </div>
 </div>
@@ -1678,7 +1678,7 @@ memory usage: 83.6+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [12]:</div>
+<div class="prompt input_prompt">In [35]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">train</span><span class="p">[</span><span class="s1">'SibSp'</span><span class="p">])</span>
@@ -1689,9 +1689,9 @@ memory usage: 83.6+ KB
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[12]:</div>
+<div class="prompt output_prompt">Out[35]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x2269ab73f98&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1a060daf668&gt;</pre>
 </div>
 </div>
 <div class="output_area">
@@ -1708,7 +1708,7 @@ memory usage: 83.6+ KB
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>most people don't have siblings or spouses on board with only a tiny percent having more than 1 spouse.</p>
+<p>Most people don't have siblings or spouses on board, with a small percent having one spouse and only a tiny percent having more than 1 spouse.</p>
 </div>
 </div>
 </div>
@@ -1722,7 +1722,7 @@ memory usage: 83.6+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [13]:</div>
+<div class="prompt input_prompt">In [36]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">train</span><span class="p">[</span><span class="s1">'Parch'</span><span class="p">])</span>
@@ -1733,9 +1733,9 @@ memory usage: 83.6+ KB
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[13]:</div>
+<div class="prompt output_prompt">Out[36]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x2269abf3a20&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1a060e59048&gt;</pre>
 </div>
 </div>
 <div class="output_area">
@@ -1766,7 +1766,7 @@ memory usage: 83.6+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [14]:</div>
+<div class="prompt input_prompt">In [37]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">train</span><span class="p">[</span><span class="s1">'Fare'</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span><span class="n">edgecolor</span><span class="o">=</span><span class="s1">'black'</span><span class="p">)</span>
@@ -1777,9 +1777,9 @@ memory usage: 83.6+ KB
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[14]:</div>
+<div class="prompt output_prompt">Out[37]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x2269ac71a58&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1a060ed5320&gt;</pre>
 </div>
 </div>
 <div class="output_area">
@@ -1796,7 +1796,7 @@ memory usage: 83.6+ KB
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>most people paid very little, which makes sense because most people were in third class.</p>
+<p>Most people paid very little, which makes sense because the majority of people were in third class.</p>
 </div>
 </div>
 </div>
@@ -1810,7 +1810,7 @@ memory usage: 83.6+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [15]:</div>
+<div class="prompt input_prompt">In [38]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">train</span><span class="o">.</span><span class="n">isnull</span><span class="p">(),</span><span class="n">yticklabels</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">cbar</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s1">'plasma'</span><span class="p">)</span>
@@ -1821,9 +1821,9 @@ memory usage: 83.6+ KB
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[15]:</div>
+<div class="prompt output_prompt">Out[38]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x2269ad7ddd8&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1a060f4feb8&gt;</pre>
 </div>
 </div>
 <div class="output_area">
@@ -1846,7 +1846,7 @@ memory usage: 83.6+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [16]:</div>
+<div class="prompt input_prompt">In [39]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">train</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">'Cabin'</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -1865,7 +1865,7 @@ memory usage: 83.6+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [17]:</div>
+<div class="prompt input_prompt">In [40]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">train</span><span class="p">[</span><span class="s1">'Embarked'</span><span class="p">])</span>
@@ -1876,9 +1876,9 @@ memory usage: 83.6+ KB
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[17]:</div>
+<div class="prompt output_prompt">Out[40]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x2269ae10cc0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1a061face48&gt;</pre>
 </div>
 </div>
 <div class="output_area">
@@ -1911,13 +1911,13 @@ memory usage: 83.6+ KB
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>I already removed the Cabin feature, so now I only need to fill the 'Age' and 'Embarked' columns. I'll fill in the 2 empty embarked columns with 'S', but more exploration needs to be done on age.</p>
+<p>I removed the 'Cabin' feature earlier. Here I only need to fill the 'Age' and 'Embarked' columns. I'll fill in the 2 empty embarked columns with 'S', but more exploration needs to be done on age.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [18]:</div>
+<div class="prompt input_prompt">In [41]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">train</span><span class="p">[</span><span class="s1">'Embarked'</span><span class="p">]</span> <span class="o">=</span> <span class="n">train</span><span class="p">[</span><span class="s1">'Embarked'</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s1">'S'</span><span class="p">)</span>
@@ -1928,7 +1928,7 @@ memory usage: 83.6+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [19]:</div>
+<div class="prompt input_prompt">In [42]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
@@ -1940,9 +1940,9 @@ memory usage: 83.6+ KB
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[19]:</div>
+<div class="prompt output_prompt">Out[42]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x2269ad129e8&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1a061fd8400&gt;</pre>
 </div>
 </div>
 <div class="output_area">
@@ -1966,10 +1966,10 @@ memory usage: 83.6+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [20]:</div>
+<div class="prompt input_prompt">In [43]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">sub_age</span><span class="p">(</span><span class="n">cols</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">fill_age</span><span class="p">(</span><span class="n">cols</span><span class="p">):</span>
     <span class="c1">#define columns for use in lambda expression</span>
     <span class="n">Age</span> <span class="o">=</span> <span class="n">cols</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">Pclass</span> <span class="o">=</span> <span class="n">cols</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
@@ -1994,10 +1994,10 @@ memory usage: 83.6+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [21]:</div>
+<div class="prompt input_prompt">In [44]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">train</span><span class="p">[</span><span class="s1">'Age'</span><span class="p">]</span> <span class="o">=</span> <span class="n">train</span><span class="p">[[</span><span class="s1">'Age'</span><span class="p">,</span><span class="s1">'Pclass'</span><span class="p">]]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">sub_age</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">train</span><span class="p">[</span><span class="s1">'Age'</span><span class="p">]</span> <span class="o">=</span> <span class="n">train</span><span class="p">[[</span><span class="s1">'Age'</span><span class="p">,</span><span class="s1">'Pclass'</span><span class="p">]]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">fill_age</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2013,7 +2013,7 @@ memory usage: 83.6+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [25]:</div>
+<div class="prompt input_prompt">In [45]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">train</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
@@ -2024,7 +2024,7 @@ memory usage: 83.6+ KB
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[25]:</div>
+<div class="prompt output_prompt">Out[45]:</div>
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
 <style scoped="">
@@ -2040,7 +2040,7 @@ memory usage: 83.6+ KB
         text-align: right;
     }
 </style>
-<table border="1" class="table-striped dataframe table table-hover">
+<table border="1" class="table-hover dataframe table-striped table">
 <thead>
 <tr style="text-align: right;">
 <th></th>
@@ -2096,7 +2096,7 @@ memory usage: 83.6+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [26]:</div>
+<div class="prompt input_prompt">In [46]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">train</span><span class="o">.</span><span class="n">dtypes</span><span class="p">[</span><span class="n">train</span><span class="o">.</span><span class="n">dtypes</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">==</span> <span class="s1">'object'</span><span class="p">)]</span>
@@ -2107,7 +2107,7 @@ memory usage: 83.6+ KB
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[26]:</div>
+<div class="prompt output_prompt">Out[46]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>Name        object
 Sex         object
@@ -2123,13 +2123,13 @@ dtype: object</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>It seems that I need to get rid of 'PassengerId' since it is just another index. 'Name' and 'Ticket' are not useful data. I will remove those variables and provide dummy variables for 'Sex' and 'Embarked'.</p>
+<p>I'll get rid of 'PassengerId' since it is just another index. 'Name' and 'Ticket' are also not useful data. I will remove those variables and provide dummy variables for 'Sex' and 'Embarked'.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [27]:</div>
+<div class="prompt input_prompt">In [47]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dum_sex</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">train</span><span class="p">[</span><span class="s1">'Sex'</span><span class="p">],</span><span class="n">drop_first</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -2141,7 +2141,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [28]:</div>
+<div class="prompt input_prompt">In [48]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">train</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">'PassengerId'</span><span class="p">,</span><span class="s1">'Name'</span><span class="p">,</span><span class="s1">'Sex'</span><span class="p">,</span><span class="s1">'Ticket'</span><span class="p">,</span><span class="s1">'Embarked'</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -2160,7 +2160,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [29]:</div>
+<div class="prompt input_prompt">In [49]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">train</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">train</span><span class="p">,</span><span class="n">dum_sex</span><span class="p">,</span><span class="n">dum_embarked</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -2171,7 +2171,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [30]:</div>
+<div class="prompt input_prompt">In [50]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">train</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -2182,7 +2182,7 @@ dtype: object</pre>
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[30]:</div>
+<div class="prompt output_prompt">Out[50]:</div>
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
 <style scoped="">
@@ -2198,7 +2198,7 @@ dtype: object</pre>
         text-align: right;
     }
 </style>
-<table border="1" class="table-striped dataframe table table-hover">
+<table border="1" class="table-hover dataframe table-striped table">
 <thead>
 <tr style="text-align: right;">
 <th></th>
@@ -2287,16 +2287,16 @@ dtype: object</pre>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Create-Machine-Learning-Model">Create Machine Learning Model<a class="anchor-link" href="#Create-Machine-Learning-Model">¶</a></h2><p>I was torn over which model to use, but I ended up chosing logistic regression for a few reasons.</p>
-<p>Logistic regression is a simple algorithm and the go-to method for binary classification. This model measures the relationship between the dependent variable (Survival in this case) and one or more independent variables (all of our other columns) using the sigmoid function: 
-<img alt="alt" class="img-fluid" img="" src="CodeCogsEqn.gif"/>
-<img alt="alt" class="img-fluid" img="" src="sigmoid.png"/></p>
+<p>Logistic regression is a simple algorithm and the go-to method for binary classification. This model translates a linear regression into a form usable for binary classification called the sigmoid function: 
+<img alt="" class="img-fluid" src="CodeCogsEqn.gif"/>
+<img alt="" class="img-fluid" src="sigmoid.png"/></p>
 <p>Essentially, if a given y-value is assigned a number greater than .5 it is given a value of 1. If it is given a number below .5 it is assigned a value of 0. Thus, binary classification occurs.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [31]:</div>
+<div class="prompt input_prompt">In [51]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="k">import</span> <span class="n">LogisticRegression</span>
@@ -2309,13 +2309,13 @@ dtype: object</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now I fit my training data to my logistic regression model:</p>
+<h2 id="fit-training-data-to-logistic-regression-model:">fit training data to logistic regression model:<a class="anchor-link" href="#fit-training-data-to-logistic-regression-model:">¶</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [32]:</div>
+<div class="prompt input_prompt">In [52]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">logmodel</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">()</span>
@@ -2328,7 +2328,7 @@ dtype: object</pre>
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[32]:</div>
+<div class="prompt output_prompt">Out[52]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
           intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
@@ -2343,13 +2343,13 @@ dtype: object</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Bring-in-the-test-data!">Bring in the test data!<a class="anchor-link" href="#Bring-in-the-test-data!">¶</a></h2>
+<h2 id="Bring-in-test-data:">Bring in test data:<a class="anchor-link" href="#Bring-in-test-data:">¶</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [57]:</div>
+<div class="prompt input_prompt">In [53]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">test</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'test.csv'</span><span class="p">)</span>
@@ -2360,7 +2360,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [59]:</div>
+<div class="prompt input_prompt">In [54]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">test</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
@@ -2371,7 +2371,7 @@ dtype: object</pre>
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[59]:</div>
+<div class="prompt output_prompt">Out[54]:</div>
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
 <style scoped="">
@@ -2387,7 +2387,7 @@ dtype: object</pre>
         text-align: right;
     }
 </style>
-<table border="1" class="table-striped dataframe table table-hover">
+<table border="1" class="table-hover dataframe table-striped table">
 <thead>
 <tr style="text-align: right;">
 <th></th>
@@ -2485,7 +2485,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [60]:</div>
+<div class="prompt input_prompt">In [55]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">test</span><span class="o">.</span><span class="n">isnull</span><span class="p">(),</span><span class="n">yticklabels</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">cbar</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s1">'plasma'</span><span class="p">)</span>
@@ -2496,9 +2496,9 @@ dtype: object</pre>
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[60]:</div>
+<div class="prompt output_prompt">Out[55]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x2269c97c1d0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1a062473320&gt;</pre>
 </div>
 </div>
 <div class="output_area">
@@ -2515,13 +2515,13 @@ dtype: object</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Tricky, tricky! The test data has all of the 'Embarked' column, but is missing a fare value! I'll have to find this value and replace it appropriately.</p>
+<p>The test data has all of the 'Embarked' column, but is missing a fare value! I'll have to find this value and replace it appropriately.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [70]:</div>
+<div class="prompt input_prompt">In [56]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">test</span><span class="p">[</span><span class="n">test</span><span class="p">[</span><span class="s1">'Fare'</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()]</span>
@@ -2532,7 +2532,7 @@ dtype: object</pre>
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[70]:</div>
+<div class="prompt output_prompt">Out[56]:</div>
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
 <style scoped="">
@@ -2548,7 +2548,7 @@ dtype: object</pre>
         text-align: right;
     }
 </style>
-<table border="1" class="table-striped dataframe table table-hover">
+<table border="1" class="table-hover dataframe table-striped table">
 <thead>
 <tr style="text-align: right;">
 <th></th>
@@ -2588,9 +2588,17 @@ dtype: object</pre>
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The missing value is third class, so I'll take the average of that class and impute the missing value.</p>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [82]:</div>
+<div class="prompt input_prompt">In [57]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">test</span><span class="p">[</span><span class="s1">'Fare'</span><span class="p">][</span><span class="mi">152</span><span class="p">]</span> <span class="o">=</span> <span class="n">test</span><span class="p">[</span><span class="n">test</span><span class="p">[</span><span class="s1">'Pclass'</span><span class="p">]</span><span class="o">==</span><span class="mi">3</span><span class="p">][</span><span class="s1">'Fare'</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -2613,20 +2621,32 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 </div>
 <div class="output_area">
-<div class="prompt output_prompt">Out[82]:</div>
+<div class="prompt output_prompt">Out[57]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>12.459677880184332</pre>
+<pre>12.459677880184334</pre>
 </div>
 </div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>apply fill_age lambda expression to fill in 'Age'</li>
+<li>get dummy variables for categorical variables</li>
+<li>create new data frame with these new values</li>
+</ul>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [83]:</div>
+<div class="prompt input_prompt">In [58]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">test</span><span class="p">[</span><span class="s1">'Age'</span><span class="p">]</span> <span class="o">=</span> <span class="n">test</span><span class="p">[[</span><span class="s1">'Age'</span><span class="p">,</span><span class="s1">'Pclass'</span><span class="p">]]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">sub_age</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">test</span><span class="p">[</span><span class="s1">'Age'</span><span class="p">]</span> <span class="o">=</span> <span class="n">test</span><span class="p">[[</span><span class="s1">'Age'</span><span class="p">,</span><span class="s1">'Pclass'</span><span class="p">]]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">fill_age</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">dum_sex</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">test</span><span class="p">[</span><span class="s1">'Sex'</span><span class="p">],</span><span class="n">drop_first</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">dum_embarked</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">test</span><span class="p">[</span><span class="s1">'Embarked'</span><span class="p">],</span><span class="n">drop_first</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
@@ -2636,7 +2656,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [84]:</div>
+<div class="prompt input_prompt">In [59]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">test</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">'Name'</span><span class="p">,</span><span class="s1">'Sex'</span><span class="p">,</span><span class="s1">'Ticket'</span><span class="p">,</span><span class="s1">'Cabin'</span><span class="p">,</span><span class="s1">'Embarked'</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -2647,7 +2667,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [85]:</div>
+<div class="prompt input_prompt">In [60]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">test</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">test</span><span class="p">,</span><span class="n">dum_sex</span><span class="p">,</span><span class="n">dum_embarked</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -2658,7 +2678,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [86]:</div>
+<div class="prompt input_prompt">In [61]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">test</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -2669,7 +2689,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[86]:</div>
+<div class="prompt output_prompt">Out[61]:</div>
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
 <style scoped="">
@@ -2685,7 +2705,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
         text-align: right;
     }
 </style>
-<table border="1" class="table-striped dataframe table table-hover">
+<table border="1" class="table-hover dataframe table-striped table">
 <thead>
 <tr style="text-align: right;">
 <th></th>
@@ -2773,13 +2793,13 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Awesome. I now have my data set up to run predictions on my test data.</p>
+<p>I now have my data set up to run predictions on my test data!</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [87]:</div>
+<div class="prompt input_prompt">In [62]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y_pred</span> <span class="o">=</span> <span class="n">logmodel</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">test</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">'PassengerId'</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
@@ -2790,7 +2810,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [88]:</div>
+<div class="prompt input_prompt">In [63]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y_pred</span>
@@ -2801,7 +2821,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[88]:</div>
+<div class="prompt output_prompt">Out[63]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>array([0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0,
        1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1,
@@ -2838,7 +2858,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [92]:</div>
+<div class="prompt input_prompt">In [64]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">submission</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
@@ -2853,7 +2873,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [93]:</div>
+<div class="prompt input_prompt">In [65]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">submission</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -2864,7 +2884,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[93]:</div>
+<div class="prompt output_prompt">Out[65]:</div>
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
 <style scoped="">
@@ -2880,7 +2900,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
         text-align: right;
     }
 </style>
-<table border="1" class="table-striped dataframe table table-hover">
+<table border="1" class="table-hover dataframe table-striped table">
 <thead>
 <tr style="text-align: right;">
 <th></th>
@@ -2922,9 +2942,17 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Compare with the given example submission called 'gender_submission':</p>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [94]:</div>
+<div class="prompt input_prompt">In [66]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">example</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'gender_submission.csv'</span><span class="p">)</span>
@@ -2935,7 +2963,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [95]:</div>
+<div class="prompt input_prompt">In [67]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">example</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -2946,7 +2974,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[95]:</div>
+<div class="prompt output_prompt">Out[67]:</div>
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
 <style scoped="">
@@ -2962,7 +2990,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
         text-align: right;
     }
 </style>
-<table border="1" class="table-striped dataframe table table-hover">
+<table border="1" class="table-hover dataframe table-striped table">
 <thead>
 <tr style="text-align: right;">
 <th></th>
@@ -3008,7 +3036,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The submission looks good! Lets submit it and see how I did.</p>
+<p>The submission looks good! Lets submit it and see how I did:</p>
 </div>
 </div>
 </div>
@@ -3016,7 +3044,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img alt="alt" class="img-fluid" img="" src="submission_pic.png"/></p>
+<p><img alt="" class="img-fluid" src="submission_pic.png"/></p>
 </div>
 </div>
 </div>
@@ -3024,7 +3052,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>75.598% prediction rate. Not bad! though there's still lots of work that needs to be done. I think I can improve my prediction accuracy through making use of more columns, boosting, or using a different machine learning model.</p>
+<p>75.598% prediction rate. Not bad, though there's still lots of work that needs to be done. I think I can improve my prediction accuracy through feature engineering (maybe a column for if someone is a child), gradient boosting, or using a different machine learning model.</p>
 <p>I hope you enjoyed this post! I'd love to hear any comments, questions, or suggestions down below. Until next time!</p>
 </div>
 </div>
