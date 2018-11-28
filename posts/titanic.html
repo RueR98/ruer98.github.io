@@ -7,7 +7,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>My First Kaggle Competition! | Data Tales
+  <title>My First Kaggle Competition | Data Tales
 </title>
   <link rel="canonical" href="https://ruer98.github.io/posts/titanic.html">
 
@@ -58,7 +58,7 @@
 
   <div class="main">
     <div class="container">
-      <h1>My First Kaggle Competition!
+      <h1>My First Kaggle Competition
 </h1>
       <hr>
 <article class="article">
@@ -1054,9 +1054,9 @@ h6:hover .anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Today, I tackle the famous Titanic dataset for my first Kaggle competition!</p>
+<p>Today, I tackle the famous Titanic dataset for my first Kaggle competition.</p>
 <h1 id="Kaggle-Machine-Learning-Competition:-Predicting-Titanic-Survivors">Kaggle Machine Learning Competition: Predicting Titanic Survivors<a class="anchor-link" href="#Kaggle-Machine-Learning-Competition:-Predicting-Titanic-Survivors">¶</a></h1><p><a href="https://www.kaggle.com/c/titanic">https://www.kaggle.com/c/titanic</a></p>
-<p><img class="img-fluid" src="titanic.jpg"/></p>
+<p><img alt="titanic" class="img-fluid" src="titanic.jpg"/></p>
 <h2 id="Competition-Description">Competition Description<a class="anchor-link" href="#Competition-Description">¶</a></h2><p>The sinking of the RMS Titanic is one of the most infamous shipwrecks in history.  On April 15, 1912, during her maiden voyage, the Titanic sank after colliding with an iceberg, killing 1502 out of 2224 passengers and crew. This sensational tragedy shocked the international community and led to better safety regulations for ships.</p>
 <p>One of the reasons that the shipwreck led to such loss of life was that there were not enough lifeboats for the passengers and crew. Although there was some element of luck involved in surviving the sinking, some groups of people were more likely to survive than others, such as women, children, and the upper-class.</p>
 <p>In this challenge, we ask you to complete the analysis of what sorts of people were likely to survive. In particular, we ask you to apply the tools of machine learning to predict which passengers survived the tragedy.</p>
@@ -1064,7 +1064,7 @@ h6:hover .anchor-link {
 <p><strong>The training set</strong> is used to build my machine learning models. For the training set, I am provided the outcome (or "ground truth") for each passenger.</p>
 <p><strong>The test set</strong> is used to see how well my model performs on unseen data. The ground truth is not provided, so it is my job to predict these outcomes.</p>
 <p>There' also <strong>gender_submission.csv</strong>, a set of predictions that assume all and only female passengers survive, as an example of what a submission file should look like.</p>
-<h1 id="Data-Dictionary">Data Dictionary<a class="anchor-link" href="#Data-Dictionary">¶</a></h1><table class="table-hover table-striped table">
+<h1 id="Data-Dictionary">Data Dictionary<a class="anchor-link" href="#Data-Dictionary">¶</a></h1><table class="table-hover table table-striped">
 <thead><tr>
 <th>Variable</th>
 <th>Definition</th>
@@ -1211,7 +1211,7 @@ Some children travelled only with a nanny, therefore parch=0 for them.</p>
         text-align: right;
     }
 </style>
-<table border="1" class="table-hover dataframe table-striped table">
+<table border="1" class="table-hover table dataframe table-striped">
 <thead>
 <tr style="text-align: right;">
 <th></th>
@@ -1389,7 +1389,7 @@ memory usage: 83.6+ KB
         text-align: right;
     }
 </style>
-<table border="1" class="table-hover dataframe table-striped table">
+<table border="1" class="table-hover table dataframe table-striped">
 <thead>
 <tr style="text-align: right;">
 <th></th>
@@ -2040,7 +2040,7 @@ memory usage: 83.6+ KB
         text-align: right;
     }
 </style>
-<table border="1" class="table-hover dataframe table-striped table">
+<table border="1" class="table-hover table dataframe table-striped">
 <thead>
 <tr style="text-align: right;">
 <th></th>
@@ -2198,7 +2198,7 @@ dtype: object</pre>
         text-align: right;
     }
 </style>
-<table border="1" class="table-hover dataframe table-striped table">
+<table border="1" class="table-hover table dataframe table-striped">
 <thead>
 <tr style="text-align: right;">
 <th></th>
@@ -2288,9 +2288,11 @@ dtype: object</pre>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Create-Machine-Learning-Model">Create Machine Learning Model<a class="anchor-link" href="#Create-Machine-Learning-Model">¶</a></h2><p>I was torn over which model to use, but I ended up chosing logistic regression for a few reasons.</p>
 <p>Logistic regression is a simple algorithm and the go-to method for binary classification. This model translates a linear regression into a form usable for binary classification called the sigmoid function: 
-<img alt="" class="img-fluid" src="CodeCogsEqn.gif"/>
-<img alt="" class="img-fluid" src="sigmoid.png"/></p>
-<p>Essentially, if a given y-value is assigned a number greater than .5 it is given a value of 1. If it is given a number below .5 it is assigned a value of 0. Thus, binary classification occurs.</p>
+<img alt="CodeCogsEqn" class="img-fluid" src="CodeCogsEqn.gif"/></p>
+<p><div align="center">where y is the linear equation:</div>
+<img alt="CodeCogsEqn2" class="img-fluid" src="CodeCogsEqn (2).gif"/>
+<img alt="sigmoid" class="img-fluid" src="sigmoid.png"/></p>
+<p>Essentially, if a p (survival in this case) is .5 or greater, it is given a value of 1. If it is a value below .5, it is assigned a value of 0. Thus, binary classification occurs.</p>
 </div>
 </div>
 </div>
@@ -2387,7 +2389,7 @@ dtype: object</pre>
         text-align: right;
     }
 </style>
-<table border="1" class="table-hover dataframe table-striped table">
+<table border="1" class="table-hover table dataframe table-striped">
 <thead>
 <tr style="text-align: right;">
 <th></th>
@@ -2548,7 +2550,7 @@ dtype: object</pre>
         text-align: right;
     }
 </style>
-<table border="1" class="table-hover dataframe table-striped table">
+<table border="1" class="table-hover table dataframe table-striped">
 <thead>
 <tr style="text-align: right;">
 <th></th>
@@ -2705,7 +2707,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
         text-align: right;
     }
 </style>
-<table border="1" class="table-hover dataframe table-striped table">
+<table border="1" class="table-hover table dataframe table-striped">
 <thead>
 <tr style="text-align: right;">
 <th></th>
@@ -2900,7 +2902,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
         text-align: right;
     }
 </style>
-<table border="1" class="table-hover dataframe table-striped table">
+<table border="1" class="table-hover table dataframe table-striped">
 <thead>
 <tr style="text-align: right;">
 <th></th>
@@ -2990,7 +2992,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
         text-align: right;
     }
 </style>
-<table border="1" class="table-hover dataframe table-striped table">
+<table border="1" class="table-hover table dataframe table-striped">
 <thead>
 <tr style="text-align: right;">
 <th></th>
@@ -3044,7 +3046,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img alt="" class="img-fluid" src="submission_pic.png"/></p>
+<p><img alt="submission_pic" class="img-fluid" src="submission_pic.png"/></p>
 </div>
 </div>
 </div>
