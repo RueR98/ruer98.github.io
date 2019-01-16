@@ -1050,9 +1050,21 @@ h6:hover .anchor-link {
 
 .ansi-bold { font-weight: bold; }
 </style>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>When I initially started using Plotly, I had problems getting my visualizations to show on my blog. I'm making this post to help clarify using plotly visualizations in Jupyter Notebooks as well as embedding them into websites.</p>
+<p><a href="https://plot.ly/python/offline/">https://plot.ly/python/offline/</a></p>
+<p><a href="https://plot.ly/python/ipython-notebook-tutorial/">https://plot.ly/python/ipython-notebook-tutorial/</a></p>
+<p><a href="https://plot.ly/ipython-notebooks/cufflinks/">https://plot.ly/ipython-notebooks/cufflinks/</a></p>
+<h2 id="Import-Libraries">Import Libraries<a class="anchor-link" href="#Import-Libraries">¶</a></h2>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [33]:</div>
+<div class="prompt input_prompt">In [1]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -1062,6 +1074,12 @@ h6:hover .anchor-link {
 <span class="kn">import</span> <span class="nn">cufflinks</span> <span class="k">as</span> <span class="nn">cf</span>
 <span class="n">init_notebook_mode</span><span class="p">(</span><span class="n">connected</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">cf</span><span class="o">.</span><span class="n">go_offline</span><span class="p">()</span>
+
+<span class="c1">#from IPython.display import YouTubeVideo</span>
+<span class="c1">#YouTubeVideo("wupToqz1e2g")</span>
+
+<span class="c1">#from IPython.display import display, Math, Latex</span>
+<span class="c1">#display(Math(r'F(k) = \int_{-\infty}^{\infty} f(x) e^{2\pi i k} dx'))</span>
 </pre></div>
 </div>
 </div>
@@ -1092,10 +1110,11 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [34]:</div>
+<div class="prompt input_prompt">In [15]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span><span class="n">columns</span><span class="o">=</span><span class="s1">'A B C D'</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#example data</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span><span class="n">columns</span><span class="o">=</span><span class="s1">'A B C D'</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -1103,7 +1122,7 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [35]:</div>
+<div class="prompt input_prompt">In [16]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -1114,7 +1133,7 @@ h6:hover .anchor-link {
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[35]:</div>
+<div class="prompt output_prompt">Out[16]:</div>
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
 <style scoped="">
@@ -1130,7 +1149,7 @@ h6:hover .anchor-link {
         text-align: right;
     }
 </style>
-<table border="1" class="table-hover table dataframe table-striped">
+<table border="1" class="table-striped dataframe table-hover table">
 <thead>
 <tr style="text-align: right;">
 <th></th>
@@ -1143,38 +1162,38 @@ h6:hover .anchor-link {
 <tbody>
 <tr>
 <th>0</th>
-<td>1.898860</td>
-<td>0.514165</td>
-<td>-0.093825</td>
-<td>-2.012563</td>
+<td>-1.194998</td>
+<td>-0.929221</td>
+<td>0.924756</td>
+<td>0.364634</td>
 </tr>
 <tr>
 <th>1</th>
-<td>0.628109</td>
-<td>0.675142</td>
-<td>-0.532143</td>
-<td>-0.086160</td>
+<td>-0.062617</td>
+<td>-2.241682</td>
+<td>0.816463</td>
+<td>-0.648011</td>
 </tr>
 <tr>
 <th>2</th>
-<td>-0.115477</td>
-<td>0.513232</td>
-<td>-0.893932</td>
-<td>-0.995474</td>
+<td>-0.033855</td>
+<td>-0.143646</td>
+<td>-0.892575</td>
+<td>-0.081340</td>
 </tr>
 <tr>
 <th>3</th>
-<td>0.830765</td>
-<td>0.769947</td>
-<td>-0.948830</td>
-<td>-0.423889</td>
+<td>-1.472793</td>
+<td>0.057371</td>
+<td>0.490333</td>
+<td>-1.138582</td>
 </tr>
 <tr>
 <th>4</th>
-<td>0.451276</td>
-<td>-0.073379</td>
-<td>1.897429</td>
-<td>0.493511</td>
+<td>-0.276943</td>
+<td>-1.357608</td>
+<td>-0.063141</td>
+<td>0.238615</td>
 </tr>
 </tbody>
 </table>
@@ -1184,23 +1203,20 @@ h6:hover .anchor-link {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [36]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'Category'</span><span class="p">:[</span><span class="s1">'A'</span><span class="p">,</span><span class="s1">'B'</span><span class="p">,</span><span class="s1">'C'</span><span class="p">],</span><span class="s1">'Values'</span><span class="p">:[</span><span class="mi">32</span><span class="p">,</span><span class="mi">43</span><span class="p">,</span><span class="mi">50</span><span class="p">]})</span>
-</pre></div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This method allows you to display and see Plotly visualizations in Jupyter Notebook, but the issue is that this does not display on a static web page. This is problematic because people usually like to see visualizations.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [37]:</div>
+<div class="prompt input_prompt">In [18]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">'scatter'</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="s1">'A'</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">'B'</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">'markers'</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1208,49 +1224,9 @@ h6:hover .anchor-link {
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[37]:</div>
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="table-hover table dataframe table-striped">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>Category</th>
-<th>Values</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>A</td>
-<td>32</td>
-</tr>
-<tr>
-<th>1</th>
-<td>B</td>
-<td>43</td>
-</tr>
-<tr>
-<th>2</th>
-<td>C</td>
-<td>50</td>
-</tr>
-</tbody>
-</table>
-</div>
+<div class="prompt"></div>
+<div class="output_html rendered_html output_subarea ">
+<div class="plotly-graph-div" id="6f450e75-b2f7-4ee5-9d98-316823be34c6" style="height: 525px; width: 100%;"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("6f450e75-b2f7-4ee5-9d98-316823be34c6", [{"type": "scatter", "x": [-1.1949978433853676, -0.06261697570429049, -0.03385531786781526, -1.472792564922321, -0.276943348292586, -0.9269318064846734, -0.25429148336128293, -1.7089532184789713, 0.8118811249400216, -3.3710640138173256, 1.2826761005576306, 1.088370551271012, -0.14675754846007294, -2.3574909122019556, -0.3986932462690887, -0.4904275864290221, 0.5254702162723558, -1.585663328690114, -0.3514771039883647, -0.4326079473509701, -0.36930914765169925, -0.8363815015169246, -1.4849195464398115, -1.2261182672563418, -0.6810300524828206, -0.06554738463474312, -1.3408839596298747, 0.3058753838148708, 0.41517608881516793, 1.021736489624657, 0.5332874002653346, 0.9401354477724505, 0.4881913767593123, 0.14982520304658054, -0.9552056497011931, -0.6019802908566024, -0.7213142687245372, 0.24114348152669504, 0.7022417256448485, 1.4796170489982532, -0.9465122631006645, -0.9033666393772133, -1.9423309339776014, -0.9187370771504078, -0.19583890484278252, -0.461267740722048, 0.21613232003571373, -0.3965667853502766, -2.17153185457581, -0.14484194092031935, 1.271995472076631, 0.9744542370315318, 0.6439488095315807, -0.8353050222095244, -1.1645268550921317, -0.29045371772481027, -1.7150625074906019, 0.5172765943966302, -1.3137975157957256, -0.6074176474130385, 0.021306043139647873, 0.7249384680725617, 0.2284763680804608, -0.8695030150501408, -0.04880270231322743, 0.1653452789858939, 0.12558077506019405, -0.632388086684335, 0.3442676407373184, 0.33586586408635544, 1.2196782420364007, -1.3648210624218655, -0.34479491164294224, -0.6477023822719971, -1.0206779260774774, -0.9300968182400406, 0.23226508709217614, 0.6755368397395648, 2.1908212534507783, -1.6136500783515382, -0.30074449595691516, 0.1114307714135956, -0.6853110069739788, 0.3381257189293981, -1.537723153101478, -0.3648260287533547, -0.41646689154476585, -1.0715098589465861, 0.6275882412678156, 0.30043783535792323, 0.2196148568208701, -0.3332360013987466, -0.3321224757614556, -0.23758380036339566, 0.27728145427730694, -0.5756338463356354, 1.183533443070299, 0.5549909660057357, -0.3273282498926123, -0.41677239200434796, -0.49026805656525024, -0.3841730563571719, -1.529412068480387, 0.7182765141891501, 0.3684386513859675, 0.9928931829066501, -0.7742469716999747, 1.5628210553748945, -0.4443336582776276, -0.2458646544426987, -0.46370413598348825, -0.1981209119851164, 0.3585457905319466, 0.9011184230979828, 0.5936120898512722, 1.5267414786249691, 0.1762207891363411, 1.095875797865716, -1.366813434049905, 1.4817733129383066, 1.3076699490755124, 0.5612126061347066, 1.6570942221221652, 1.8703145445496492, 0.3802666995098252, -0.21694191918315722, -0.14954734151602136, -2.628784678052971, -0.5563780643524908, 0.1638939342966123, -0.0012285968078988936, 1.109745091487718, 0.21517394508216514, 0.1324424863026736, 0.655302160412027, 0.7911657657059381, 0.012641297466790909, 0.08766897304840782, -1.1860700816813792, 0.642819453950549, 0.4022033251579023, -1.686749929573865, 0.5164213890856438, 1.060574156035774, -0.7086890723620398, 0.607023677494647, -1.5637159765721897, -0.11769440361728431, 0.47645555517659716, 1.9115001406670633, -0.3873978232556583, 0.06894638186827973, 0.2755865231561169, -1.0283186290171753, -0.6199751121809743, -0.35361744281940394, 0.3550185434012255, -0.7183090859274615, -0.5435424524936608, -0.39645181976553784, 0.5399452316820634, -1.1456014905235763, 0.023062844381966298, 0.7359621349721178, 0.29492504051737956, -1.3970136830176203, -0.5152808631879617, -0.1846674575389693, -1.053212251165999, 1.166537190079252, 1.2952384816171072, -0.01806383605854272, -0.0019958494290127668, 0.17441764535899196, 0.027345423823734304, -1.9071911282700822, -1.2171413851203574, -0.0014989610073805947, 0.38532255351662914, 0.5503537395676408, 0.2395284449027058, 0.5860905566146023, -1.1381621783171165, -1.3536740419747917, 0.3814618735129455, -0.8910698123098953, -0.08213229294284309, 0.17949032246039626, -0.023509548100480792, 0.05269524121583125, 0.7252811918847808, -0.9162407472958944, 2.3997687805654855, -0.3848992516106692, 1.8260056602740713, -0.4418807773541341, -0.11621336557720124, -0.023687306005217377, 1.1274509341676688, 1.3342638330597836], "y": [-0.9292211036526365, -2.2416819795394796, -0.14364612406104996, 0.05737063959433193, -1.3576081162731162, -1.1231362092893138, 0.640889208659116, 0.4330525717549382, 0.9386004722855479, -0.09408590739737291, -0.7400905798037388, 0.02598362941620936, 0.9640005616532457, -1.0082266301740115, 1.2048282301624558, -0.8661248725306059, 0.9179546278475785, 0.7060715265931317, 0.7803564999665624, 0.8787628688464786, -1.1070418385819027, -1.1249255839496648, 0.7992030106838702, 2.8955638755560815, -0.6962465178819074, -0.8217817521987868, -0.9577349307144118, -0.3884949649120059, 1.4564175049245458, 0.19683567720549772, -0.5250786851452515, 0.5444014327999085, -2.3601569687060375, 0.5213240796380358, -1.7656830969310708, -0.9529753101547319, 2.017868812430983, -0.1711102591980283, 0.6847038208696555, 0.9504161615483877, 0.23612043891513876, -0.08902170970401735, -0.860958111994377, -0.7883481366285076, 0.35436879051728176, 1.9090939918254202, -0.7261776352880442, -0.4785553636978463, 0.9691852682256732, -2.814735448517028, -1.8291961596133377, -2.4697373746099465, 1.1214492696719616, 1.1763815560448863, 0.6648208344257226, 1.5834269993160266, 2.3814795787521703, 1.6440687308764474, -1.4649865303113982, -0.6215318182661991, 0.5287044965808388, -1.4785817405317816, -0.08225773292846256, -0.658740111706363, 0.5077055327690495, 1.2368450372718036, 0.8792210001032996, 1.6133992471321288, -1.9702080013251693, -0.25305211020856955, -0.7937845551185668, -0.6426793100943105, -2.6449585971924217, -1.970131786340905, -0.6268669691525393, -0.1690571258108408, 0.45309967451886346, -1.4604534707848487, -0.5233591552575817, -2.3388830943743235, -0.2258412781433344, 1.6925279316694546, 1.4235290273377015, -0.6912554249386388, 0.8617753641817342, -0.4299314656452094, 0.6884472257340124, -0.937383154134894, -1.282873448592578, -0.27040485631443856, 0.0835326490392513, -0.04590221238480734, -0.6244892396941611, 0.22759806428210955, -1.1861725341289204, 1.1445214400023611, 0.75241344220428, 0.0767010511460741, 0.24994866594799747, -1.1523601553014269, -0.5566159234538428, 0.5046764637311675, 1.1621734592026822, 0.9965424649676573, -0.4270562573449485, -0.9148947526881839, 0.6359954939760247, 0.39096084542263987, -1.519538570691682, 0.10219886766081111, -0.9483468953261985, 1.112331703234153, 0.2613971223950805, 0.4808378469876127, 0.2791999829294761, 0.9262822637301107, -1.3414759381633048, 1.002259427584653, 0.8516743379253725, 0.7777176279497248, -1.635851472357445, -1.1770370438633018, -0.514818610194607, 0.057885124793706874, 0.041331838817149545, -0.12372386217959767, 1.0163102896471923, -0.1769980403968904, -0.13552740136899477, 1.1337512528694988, 0.8360912647890498, 0.48629029340718116, -0.09058708949404709, 0.9081426065393423, -0.8985056126140789, -0.7386458797282877, 1.9073704599046384, -0.31354517457706643, -0.7999477148118267, -0.5470601549804682, -0.09564079168134657, 0.453240532288327, 0.14671004211229338, -0.2549087633314793, 0.30376071868250465, 1.3278001949657738, -0.06854478990955289, 0.4527892375058924, -1.0865211757023576, -1.7372758382175244, 0.8771780045381882, 1.3916092177294395, -1.8336831259377584, 0.9906445112459944, 0.17370908732576326, -2.4345813944377572, -1.2692834460385047, 0.7426775755502053, 0.9131269798967387, 0.8691670194454474, -1.8206919716407197, 0.5588237257388016, -0.6684390407470391, 0.4948784156402467, 1.0174456607061244, 1.1360120838868857, -1.909345443372134, 1.6726457791784861, -0.28762906003199645, -0.5208987295339957, -1.0383753945206842, 1.4150078714671468, -1.026146943509294, -0.4435624529032092, -0.21167558823192162, 0.334592993819474, 0.9332992093716462, 0.06794860248273138, 0.11157728073033638, -0.25811124131107177, 1.7572809832786564, 0.30033331115953893, 1.2243716373081293, 0.5703039274802082, 0.18591422614910308, -1.4833711878369658, -0.021609403120593767, 1.4213858385951423, -0.3910501736110342, 1.1902748318639578, 0.4195428999016038, 1.7180028700025964, -1.0374341107344287, -0.4133568147414902, 1.1590619263053064, 0.23247953453132292, 0.521643976903859, -1.0513626826095726, -0.4223227572345752, 0.043640581530884424], "name": "B", "text": "", "line": {"color": "rgba(255, 153, 51, 1.0)", "width": 1.3, "dash": "solid", "shape": "linear"}, "mode": "markers", "marker": {"symbol": "dot", "size": 10}}], {"legend": {"bgcolor": "#F5F6F9", "font": {"color": "#4D5663"}}, "paper_bgcolor": "#F5F6F9", "plot_bgcolor": "#F5F6F9", "yaxis1": {"tickfont": {"color": "#4D5663"}, "gridcolor": "#E1E5ED", "titlefont": {"color": "#4D5663"}, "zerolinecolor": "#E1E5ED", "showgrid": true, "title": ""}, "xaxis1": {"tickfont": {"color": "#4D5663"}, "gridcolor": "#E1E5ED", "titlefont": {"color": "#4D5663"}, "zerolinecolor": "#E1E5ED", "showgrid": true, "title": ""}, "titlefont": {"color": "#4D5663"}}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
 </div>
 </div>
 </div>
@@ -1258,7 +1234,7 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [38]:</div>
+<div class="prompt input_prompt">In [6]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#df.iplot(kind='scatter',x='A',y='B',mode='markers',size=10,sharing='Public')</span>
@@ -1270,30 +1246,9 @@ h6:hover .anchor-link {
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[38]:</div>
+<div class="prompt output_prompt">Out[6]:</div>
 <div class="output_html rendered_html output_subarea output_execute_result">
 <iframe frameborder="0" height="800" scrolling="no" src="//plot.ly/~ruer98/1.embed" width="900"></iframe>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [39]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">'scatter'</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="s1">'A'</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">'B'</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">'markers'</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">sharing</span><span class="o">=</span><span class="s1">'Public'</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_html rendered_html output_subarea ">
-<div class="plotly-graph-div" id="dbc38bca-c9d0-45fc-846f-eaf4fd673205" style="height: 525px; width: 100%;"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("dbc38bca-c9d0-45fc-846f-eaf4fd673205", [{"type": "scatter", "x": [1.8988601722653964, 0.6281090788789696, -0.11547702822047172, 0.8307649367617291, 0.4512757262712262, -0.6005885380385619, 0.5996002769484855, 0.3190584610608679, 1.097717184915011, 1.6143609182775336, -2.0834958934033065, 0.09680170909614179, 2.222252416160731, 0.455588310486291, -0.568329878914163, 0.7329298528188035, -1.4353499646572476, -0.27909685494875786, 0.4045390332022164, 0.6666733869299231, 1.0778138896163956, 1.0024394916823465, -0.3665874285786129, -0.5942123627760165, -1.1560947713283876, -0.6840422983379468, 0.24789782823180712, -0.6523934743127356, -0.3961342322546918, -0.9221199715763639, 0.3764243421923052, 0.3732016786247661, 0.019517117716951513, -0.4670265705825558, -0.6509327850743938, 0.15028491892274948, 0.7865437355490538, -0.32188989023467673, 0.18872165950811437, -0.6230124973881795, -1.010358356534426, -1.6530530321848027, -0.7595342771107036, 1.4735315675434617, -0.41069737403699846, -0.39697539170977614, -0.6558465303780473, 0.07821919940371098, -0.20843886415035112, -0.05347028516546203, 0.7643167899230047, 0.21322448918932432, 1.2305526584528805, 0.4699697685123783, -1.2799892409594709, -0.5676382186775119, 0.8406487482862539, -0.20866682882459398, 1.208622320008268, 1.1663107059901798, 1.2091772195479182, 0.5504817214731489, -1.1023677133902603, 0.0025136677876184026, -1.7452120063072663, -0.5794108871922449, 0.5417037119549105, -2.0194188050786477, 0.20088047570189305, -0.054180434194562595, -0.325229744652096, -0.16254445740639709, -2.0232469077012643, 0.023374963448869645, 0.5904032612275077, -1.2440225842906736, 3.4539889070310568, -0.06048398697875863, 0.23071336372358478, -0.4956403765979621, 0.7489757714591756, 0.6017235666418282, 1.2884258971664289, 0.19896014541459656, -0.7348702804923833, -0.40493587854442614, -1.1343507646425308, 1.1712819275994697, 0.050597435307134085, -0.18918751254574517, -0.43587174935229744, 1.277604223336888, -0.28639370816897614, -0.4884094120398697, -1.9035108012502073, 0.5122578890508087, 1.8427456669693865, -0.41304639593832043, -0.5283226484142984, -0.1912517990010938], "y": [0.5141646076150974, 0.6751416011848391, 0.5132317476644004, 0.7699466135899302, -0.07337852050817212, -0.19598836523323182, -1.0076083280520114, -0.08110167303624037, -0.7381778094341389, 0.7861619541305349, 0.4565073985819305, 0.3164637414776549, 0.2531642464276052, -0.3395247997823493, 0.1649104433673601, 0.6102885902193, 0.49770862818282435, 0.995013549693895, -1.6560153814187764, -1.8067198040358325, -0.9502026576764434, -0.3761214336510695, 0.17276568850463211, 1.1744735677479192, -1.656280616556471, 1.3610702331145421, -0.6970138490276723, -0.06604951911286608, -1.442977197967286, 1.3363487893230548, 0.16043811700162033, -0.6409245417006793, 2.7749653275217687, -0.8166591981348809, 0.38640761944077956, -0.4930206180826061, -1.6084211994538886, 0.13576234386289113, -1.2888558729431534, -1.0407278896582701, -0.1744928882393134, -0.8205709498017397, 0.015218468336364794, -0.6627761185196405, 0.5704648981384148, -2.4262571672706708, -1.2837820059694838, 0.5266517862469051, 0.7450301860484199, 0.2888925274321661, -0.25345128921489124, -0.8717717000187482, 2.200343393393286, 0.19698510462607036, -0.7360040739742144, 0.4850419328312457, -0.058321314464558835, 0.017168429129034966, -1.655863794930119, -0.2471394552022242, -0.6231220190482065, -0.06149034297806398, -0.9167438044381623, -0.2730415453640171, -0.7096900791948794, 2.073091709808757, -0.7673544510066962, -2.278558723992399, 1.0639662582048202, -1.312083739516569, 0.7204590108112141, -0.6716786940836321, -1.9510518275986366, -0.1811392190965614, 0.6112056536760264, -1.2124569464855341, -0.5777353345787071, 0.5813798638855664, 0.5805530168472017, -0.4277369319735446, 1.128244739983729, 0.5394764571720476, 1.9501661233633345, 2.2969043568707193, 0.08016293648079587, 0.9902542311861143, -0.5013575134547482, -0.4058081948593911, -0.1473290517646122, 0.9389873554833532, -0.3620300197519792, -0.93309924099472, 0.4532524995407606, 1.9452948473813798, 0.07902435077362269, -0.14020751266422393, -0.021983778769346356, -2.17170362129466, 1.044801877978568, 0.8763060302843062], "name": "B", "text": "", "line": {"color": "rgba(255, 153, 51, 1.0)", "width": 1.3, "dash": "solid", "shape": "linear"}, "mode": "markers", "marker": {"symbol": "dot", "size": 10}}], {"legend": {"bgcolor": "#F5F6F9", "font": {"color": "#4D5663"}}, "paper_bgcolor": "#F5F6F9", "plot_bgcolor": "#F5F6F9", "yaxis1": {"tickfont": {"color": "#4D5663"}, "gridcolor": "#E1E5ED", "titlefont": {"color": "#4D5663"}, "zerolinecolor": "#E1E5ED", "showgrid": true, "title": ""}, "xaxis1": {"tickfont": {"color": "#4D5663"}, "gridcolor": "#E1E5ED", "titlefont": {"color": "#4D5663"}, "zerolinecolor": "#E1E5ED", "showgrid": true, "title": ""}, "titlefont": {"color": "#4D5663"}}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
 </div>
 </div>
 </div>
