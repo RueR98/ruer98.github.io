@@ -1064,7 +1064,7 @@ h6:hover .anchor-link {
 <p><strong>The training set</strong> is used to build my machine learning models. For the training set, I am provided the outcome (or "ground truth") for each passenger.</p>
 <p><strong>The test set</strong> is used to see how well my model performs on unseen data. The ground truth is not provided, so it is my job to predict these outcomes.</p>
 <p>There' also <strong>gender_submission.csv</strong>, a set of predictions that assume all and only female passengers survive, as an example of what a submission file should look like.</p>
-<h1 id="Data-Dictionary">Data Dictionary<a class="anchor-link" href="#Data-Dictionary">¶</a></h1><table class="table table-hover table-striped">
+<h1 id="Data-Dictionary">Data Dictionary<a class="anchor-link" href="#Data-Dictionary">¶</a></h1><table class="table table-striped table-hover">
 <thead><tr>
 <th>Variable</th>
 <th>Definition</th>
@@ -1150,7 +1150,7 @@ Some children travelled only with a nanny, therefore parch=0 for them.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [26]:</div>
+<div class="prompt input_prompt">In [1]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -1158,6 +1158,9 @@ Some children travelled only with a nanny, therefore parch=0 for them.</p>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 <span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">"ignore"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1211,7 +1214,7 @@ Some children travelled only with a nanny, therefore parch=0 for them.</p>
         text-align: right;
     }
 </style>
-<table border="1" class="table table-hover table-striped dataframe">
+<table border="1" class="table table-striped dataframe table-hover">
 <thead>
 <tr style="text-align: right;">
 <th></th>
@@ -1389,7 +1392,7 @@ memory usage: 83.6+ KB
         text-align: right;
     }
 </style>
-<table border="1" class="table table-hover table-striped dataframe">
+<table border="1" class="table table-striped dataframe table-hover">
 <thead>
 <tr style="text-align: right;">
 <th></th>
@@ -2040,7 +2043,7 @@ memory usage: 83.6+ KB
         text-align: right;
     }
 </style>
-<table border="1" class="table table-hover table-striped dataframe">
+<table border="1" class="table table-striped dataframe table-hover">
 <thead>
 <tr style="text-align: right;">
 <th></th>
@@ -2198,7 +2201,7 @@ dtype: object</pre>
         text-align: right;
     }
 </style>
-<table border="1" class="table table-hover table-striped dataframe">
+<table border="1" class="table table-striped dataframe table-hover">
 <thead>
 <tr style="text-align: right;">
 <th></th>
@@ -2389,7 +2392,7 @@ dtype: object</pre>
         text-align: right;
     }
 </style>
-<table border="1" class="table table-hover table-striped dataframe">
+<table border="1" class="table table-striped dataframe table-hover">
 <thead>
 <tr style="text-align: right;">
 <th></th>
@@ -2550,7 +2553,7 @@ dtype: object</pre>
         text-align: right;
     }
 </style>
-<table border="1" class="table table-hover table-striped dataframe">
+<table border="1" class="table table-striped dataframe table-hover">
 <thead>
 <tr style="text-align: right;">
 <th></th>
@@ -2707,7 +2710,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
         text-align: right;
     }
 </style>
-<table border="1" class="table table-hover table-striped dataframe">
+<table border="1" class="table table-striped dataframe table-hover">
 <thead>
 <tr style="text-align: right;">
 <th></th>
@@ -2902,7 +2905,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
         text-align: right;
     }
 </style>
-<table border="1" class="table table-hover table-striped dataframe">
+<table border="1" class="table table-striped dataframe table-hover">
 <thead>
 <tr style="text-align: right;">
 <th></th>
@@ -2992,7 +2995,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
         text-align: right;
     }
 </style>
-<table border="1" class="table table-hover table-striped dataframe">
+<table border="1" class="table table-striped dataframe table-hover">
 <thead>
 <tr style="text-align: right;">
 <th></th>

@@ -1178,6 +1178,9 @@ h6:hover .anchor-link {
 <span class="kn">from</span> <span class="nn">scipy</span> <span class="k">import</span> <span class="n">stats</span>
 <span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="k">import</span> <span class="n">norm</span><span class="p">,</span> <span class="n">skew</span>
 <span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">"ignore"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1231,7 +1234,7 @@ h6:hover .anchor-link {
         text-align: right;
     }
 </style>
-<table border="1" class="table table-hover table-striped dataframe">
+<table border="1" class="table table-striped dataframe table-hover">
 <thead>
 <tr style="text-align: right;">
 <th></th>
@@ -1532,7 +1535,7 @@ memory usage: 924.0+ KB
         text-align: right;
     }
 </style>
-<table border="1" class="table table-hover table-striped dataframe">
+<table border="1" class="table table-striped dataframe table-hover">
 <thead>
 <tr style="text-align: right;">
 <th></th>
@@ -1784,17 +1787,9 @@ memory usage: 924.0+ KB
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>C:\Users\Ryan\Anaconda3\lib\site-packages\matplotlib\axes\_axes.py:6462: UserWarning: The 'normed' kwarg is deprecated, and has been replaced by the 'density' kwarg.
-  warnings.warn("The 'normed' kwarg is deprecated, and has been "
-</pre>
-</div>
-</div>
-<div class="output_area">
 <div class="prompt output_prompt">Out[6]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1503c6418d0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x20f57934668&gt;</pre>
 </div>
 </div>
 <div class="output_area">
@@ -1833,7 +1828,7 @@ memory usage: 924.0+ KB
 <pre>((array([-3.30513952, -3.04793228, -2.90489705, ...,  2.90489705,
           3.04793228,  3.30513952]),
   array([ 34900,  35311,  37900, ..., 625000, 745000, 755000], dtype=int64)),
- (74160.164745194154, 180921.19589041095, 0.93196656415129864))</pre>
+ (74160.16474519415, 180921.19589041095, 0.9319665641512986))</pre>
 </div>
 </div>
 <div class="output_area">
@@ -1850,7 +1845,7 @@ memory usage: 924.0+ KB
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Luckily, my stats class recently covered these types of transformations, and it looks like a logarithmic transformation is appropriate:</p>
+<p>My stats class recently covered these types of transformations, and a logarithmic transformation usually works best on pricing data:</p>
 </div>
 </div>
 </div>
@@ -1878,17 +1873,9 @@ memory usage: 924.0+ KB
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>C:\Users\Ryan\Anaconda3\lib\site-packages\matplotlib\axes\_axes.py:6462: UserWarning: The 'normed' kwarg is deprecated, and has been replaced by the 'density' kwarg.
-  warnings.warn("The 'normed' kwarg is deprecated, and has been "
-</pre>
-</div>
-</div>
-<div class="output_area">
 <div class="prompt output_prompt">Out[9]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1503c6286d8&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x20f578ec7b8&gt;</pre>
 </div>
 </div>
 <div class="output_area">
@@ -1918,9 +1905,9 @@ memory usage: 924.0+ KB
 <div class="output_text output_subarea output_execute_result">
 <pre>((array([-3.30513952, -3.04793228, -2.90489705, ...,  2.90489705,
           3.04793228,  3.30513952]),
-  array([ 10.46024211,  10.47194981,  10.54270639, ...,  13.34550693,
-          13.5211395 ,  13.53447303])),
- (0.39826223081618883, 12.024050901109383, 0.99537614756366166))</pre>
+  array([10.46024211, 10.47194981, 10.54270639, ..., 13.34550693,
+         13.5211395 , 13.53447303])),
+ (0.39826223081618883, 12.024050901109383, 0.9953761475636617))</pre>
 </div>
 </div>
 <div class="output_area">
@@ -1959,7 +1946,7 @@ memory usage: 924.0+ KB
 <div class="output_area">
 <div class="prompt output_prompt">Out[11]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1503c641198&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x20f53d20ba8&gt;</pre>
 </div>
 </div>
 <div class="output_area">
@@ -2012,7 +1999,7 @@ These instances of multicollinearity are:</p>
 <div class="output_area">
 <div class="prompt output_prompt">Out[12]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1503d1cd978&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x20f583f43c8&gt;</pre>
 </div>
 </div>
 <div class="output_area">
@@ -2057,7 +2044,7 @@ These instances of multicollinearity are:</p>
 <div class="output_area">
 <div class="prompt output_prompt">Out[13]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;seaborn.axisgrid.PairGrid at 0x1503d03cc50&gt;</pre>
+<pre>&lt;seaborn.axisgrid.PairGrid at 0x20f583dbc88&gt;</pre>
 </div>
 </div>
 <div class="output_area">
@@ -2095,7 +2082,7 @@ These instances of multicollinearity are:</p>
 <div class="output_area">
 <div class="prompt output_prompt">Out[14]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1503d03c8d0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x20f5aa5b7b8&gt;</pre>
 </div>
 </div>
 <div class="output_area">
@@ -2180,7 +2167,7 @@ These instances of multicollinearity are:</p>
 <div class="output_area">
 <div class="prompt output_prompt">Out[16]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;seaborn.axisgrid.PairGrid at 0x1504095b208&gt;</pre>
+<pre>&lt;seaborn.axisgrid.PairGrid at 0x20f5be823c8&gt;</pre>
 </div>
 </div>
 <div class="output_area">
@@ -2216,7 +2203,7 @@ These instances of multicollinearity are:</p>
 <div class="output_area">
 <div class="prompt output_prompt">Out[17]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x150435010b8&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x20f5e4374a8&gt;</pre>
 </div>
 </div>
 <div class="output_area">
@@ -2259,7 +2246,7 @@ These instances of multicollinearity are:</p>
         text-align: right;
     }
 </style>
-<table border="1" class="table table-hover table-striped dataframe">
+<table border="1" class="table table-striped dataframe table-hover">
 <thead>
 <tr style="text-align: right;">
 <th></th>
@@ -2372,7 +2359,7 @@ These instances of multicollinearity are:</p>
 <div class="output_area">
 <div class="prompt output_prompt">Out[20]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x150435c4908&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x20f5e82ce10&gt;</pre>
 </div>
 </div>
 <div class="output_area">
@@ -2400,7 +2387,7 @@ These instances of multicollinearity are:</p>
 <div class="output_area">
 <div class="prompt output_prompt">Out[21]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x15043c37438&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x20f5ee9e780&gt;</pre>
 </div>
 </div>
 <div class="output_area">
@@ -2460,7 +2447,7 @@ These instances of multicollinearity are:</p>
         text-align: right;
     }
 </style>
-<table border="1" class="table table-hover table-striped dataframe">
+<table border="1" class="table table-striped dataframe table-hover">
 <thead>
 <tr style="text-align: right;">
 <th></th>
@@ -2640,24 +2627,6 @@ These instances of multicollinearity are:</p>
 </div>
 </div>
 </div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>C:\Users\Ryan\Anaconda3\lib\site-packages\ipykernel_launcher.py:1: FutureWarning: Sorting because non-concatenation axis is not aligned. A future version
-of pandas will change to not sort by default.
-
-To accept the future behavior, pass 'sort=True'.
-
-To retain the current behavior and silence the warning, pass sort=False
-
-  """Entry point for launching an IPython kernel.
-</pre>
-</div>
-</div>
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -2688,7 +2657,7 @@ To retain the current behavior and silence the warning, pass sort=False
         text-align: right;
     }
 </style>
-<table border="1" class="table table-hover table-striped dataframe">
+<table border="1" class="table table-striped dataframe table-hover">
 <thead>
 <tr style="text-align: right;">
 <th></th>
@@ -2879,7 +2848,7 @@ To retain the current behavior and silence the warning, pass sort=False
         text-align: right;
     }
 </style>
-<table border="1" class="table table-hover table-striped dataframe">
+<table border="1" class="table table-striped dataframe table-hover">
 <thead>
 <tr style="text-align: right;">
 <th></th>
@@ -3235,7 +3204,7 @@ To retain the current behavior and silence the warning, pass sort=False
         text-align: right;
     }
 </style>
-<table border="1" class="table table-hover table-striped dataframe">
+<table border="1" class="table table-striped dataframe table-hover">
 <thead>
 <tr style="text-align: right;">
 <th></th>
@@ -3473,7 +3442,7 @@ Here's a quick read on the technique: <a href="https://www.statisticshowto.datas
         text-align: right;
     }
 </style>
-<table border="1" class="table table-hover table-striped dataframe">
+<table border="1" class="table table-striped dataframe table-hover">
 <thead>
 <tr style="text-align: right;">
 <th></th>
@@ -3681,7 +3650,7 @@ Here's a quick read on the technique: <a href="https://www.statisticshowto.datas
         text-align: right;
     }
 </style>
-<table border="1" class="table table-hover table-striped dataframe">
+<table border="1" class="table table-striped dataframe table-hover">
 <thead>
 <tr style="text-align: right;">
 <th></th>
@@ -3900,8 +3869,8 @@ Here's a quick read on the technique: <a href="https://www.statisticshowto.datas
 <div class="output_area">
 <div class="prompt output_prompt">Out[40]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>array([ 128428.9375  ,  166563.046875,  182806.5     , ...,  165588.828125,
-        115200.828125,  234027.296875], dtype=float32)</pre>
+<pre>array([128428.94, 166563.05, 182806.5 , ..., 165588.83, 115200.83,
+       234027.3 ], dtype=float32)</pre>
 </div>
 </div>
 </div>
@@ -3960,7 +3929,7 @@ Here's a quick read on the technique: <a href="https://www.statisticshowto.datas
         text-align: right;
     }
 </style>
-<table border="1" class="table table-hover table-striped dataframe">
+<table border="1" class="table table-striped dataframe table-hover">
 <thead>
 <tr style="text-align: right;">
 <th></th>
@@ -4032,7 +4001,7 @@ Here's a quick read on the technique: <a href="https://www.statisticshowto.datas
         text-align: right;
     }
 </style>
-<table border="1" class="table table-hover table-striped dataframe">
+<table border="1" class="table table-striped dataframe table-hover">
 <thead>
 <tr style="text-align: right;">
 <th></th>
