@@ -1136,10 +1136,10 @@ Using TensorFlow backend.
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>My process for scraping lyrics.com was to play around with the website HTML and use inspect element to find what class certain features belonged to. For example, I clicked on the album cover and saw that albums were in an h3 class titled "artist-album-label." I then scraped from these classes using BeautifulSoup:</p>
-<p><em>step 1</em>
-&lt;img src = 'album_select.png' alt='album'&gt;</p>
-<p><em>step 2</em>
-&lt;img src = 'example_html.png' alt='ex_html'&gt;</p>
+<p><em>step 1</em></p>
+<p><img alt="album" class="img-fluid" src="album_select.png"/></p>
+<p><em>step 2</em></p>
+<p><img alt="ex_html" class="img-fluid" src="example_html.png"/></p>
 </div>
 </div>
 </div>
@@ -1410,7 +1410,7 @@ You Always Sing the Same
         text-align: right;
     }
 </style>
-<table border="1" class="table-striped table table-hover dataframe">
+<table border="1" class="dataframe table table-striped table-hover">
 <thead>
 <tr style="text-align: right;">
 <th></th>
