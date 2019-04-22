@@ -1410,7 +1410,7 @@ You Always Sing the Same
         text-align: right;
     }
 </style>
-<table border="1" class="dataframe table table-striped table-hover">
+<table border="1" class="table-striped dataframe table table-hover">
 <thead>
 <tr style="text-align: right;">
 <th></th>
@@ -1581,7 +1581,7 @@ You Always Sing the Same
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Part-3:-Model-Building">Part 3: Model Building<a class="anchor-link" href="#Part-3:-Model-Building">¶</a></h2><hr/>
-<p>I ran into computing power problems here, since I wanted to create a more complex neural network. This model has 50 nodes, 4 layers, and 20 epochs. It took around 3 hours to generate on my laptop:</p>
+<p>I ran into computing power problems here, since I wanted to create a more complex neural network. This model has 50 nodes, 4 layers, and 20 epochs. It took around 4 hours to generate on my laptop:</p>
 </div>
 </div>
 </div>
@@ -2118,9 +2118,9 @@ Blessed a horse and perfect than mountains  Look on bright your design The red h
     <span class="n">tim</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">songs</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">'td'</span><span class="p">,</span> <span class="p">{</span><span class="s1">'class'</span><span class="p">:</span> <span class="s1">'tal qx'</span><span class="p">})</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">songs</span><span class="p">[::</span><span class="mi">2</span><span class="p">]:</span>
-        <span class="n">s</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+        <span class="n">son</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">songs</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]:</span>
-        <span class="n">ti</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+        <span class="n">tim</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
     <span class="n">base_url</span> <span class="o">=</span> <span class="s1">'https://www.lyrics.com/'</span>
     <span class="n">lyr</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">songs</span><span class="p">)):</span>
