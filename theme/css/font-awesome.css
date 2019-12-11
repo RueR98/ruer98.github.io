@@ -634,7 +634,7 @@
 .fa-github:before {
   content: "\f09b";
 }
-.fa-unlock:before {
+.fa-kaggle:before { content: "\f5fa";}.fa-unlock:before {
   content: "\f09c";
 }
 .fa-credit-card:before {
