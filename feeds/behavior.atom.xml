@@ -1048,7 +1048,7 @@ The MBTI is a personality type system that categorizes everyone into one of 16 p
         text-align: right;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table-striped table table-hover dataframe"&gt;
+&lt;table border="1" class="table-striped table dataframe table-hover"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -1198,7 +1198,7 @@ The MBTI is a personality type system that categorizes everyone into one of 16 p
         text-align: right;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table-striped table table-hover dataframe"&gt;
+&lt;table border="1" class="table-striped table dataframe table-hover"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;

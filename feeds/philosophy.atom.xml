@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Beyond Data - philosophy</title><link href="https://ruer98.github.io/" rel="alternate"></link><link href="https://ruer98.github.io/feeds/philosophy.atom.xml" rel="self"></link><id>https://ruer98.github.io/</id><updated>2019-01-07T15:00:00-06:00</updated><entry><title>WWII Bombers and Selection Bias in Data Science</title><link href="https://ruer98.github.io/philosophy/planes.html" rel="alternate"></link><published>2019-01-07T15:00:00-06:00</published><updated>2019-01-07T15:00:00-06:00</updated><author><name>Ryan Rue</name></author><id>tag:ruer98.github.io,2019-01-07:/philosophy/planes.html</id><summary type="html">&lt;p&gt;In this post, I tell a classic story of selection bias, explain the significance to data science, and suggest methods to prevent selection bias in data science.&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Beyond Data - philosophy</title><link href="https://ruer98.github.io/" rel="alternate"></link><link href="https://ruer98.github.io/feeds/philosophy.atom.xml" rel="self"></link><id>https://ruer98.github.io/</id><updated>2020-05-15T18:00:00-05:00</updated><entry><title>Stoicism 101</title><link href="https://ruer98.github.io/philosophy/stoic.html" rel="alternate"></link><published>2020-05-15T18:00:00-05:00</published><updated>2020-05-15T18:00:00-05:00</updated><author><name>Ryan Rue</name></author><id>tag:ruer98.github.io,2020-05-15:/philosophy/stoic.html</id><summary type="html">&lt;p&gt;This blog post explains what Stoicism is and how it can help you live a better life.&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
@@ -975,21 +975,65 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;During WWII, a statistician named Abraham Wald was asked to help the US decide where to add armor to their bombers. Researchers from the Center for Naval Analyses conducted a study and recommended adding armor to where the most damage occurred, but Wald paradoxically recommended adding armor where there was no damage! Wald realized that his data only came from bombers that survived; those that were shot down over enemy territory were not part of the sample. Wald assumed an equal distribution of holes in the plane, so undamaged areas of the surviving planes showed where the lost planes must have been hit as shown in the figure below:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="plane" class="img-fluid" src="WW2plane.jpg"/&gt;&lt;/p&gt;
-&lt;div align="center"&gt;
-  Source: https://insurancedatascience.org/downloads/London2018/Keynote2/Eric_Novik.pdf
-&lt;/div&gt;&lt;p&gt;Wald had realized that his sample contained selection bias, and made a decision accordingly which potentially saved many lives.&lt;/p&gt;
-&lt;h3 id="So-what-is-selection-bias-and-why-does-it-happen?"&gt;So what is selection bias and why does it happen?&lt;a class="anchor-link" href="#So-what-is-selection-bias-and-why-does-it-happen?"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Selection bias is when the sample data that is gathered and prepared for modeling has characteristics that are not representative of the true, future population of cases the model will see. Basically, selection bias occurs when a subset of the data are excluded from the analysis.&lt;/p&gt;
-&lt;p&gt;Selection bias occurs because data scientists often do not get to decide where data samples come from or how they are conducted, which means that there is no certainty that all subsets of a sample are covered or if these subsets are proportional to the actual population. Even when data are carefully constructed in controlled statistical experiments, selection bias can still occur because there is a practical limit to what can be known about a population and put into a dataset.&lt;/p&gt;
-&lt;h3 id="So-why-does-selection-bias-matter-to-data-science-and-how-can-this-problem-be-reduced?"&gt;So why does selection bias matter to data science and how can this problem be reduced?&lt;a class="anchor-link" href="#So-why-does-selection-bias-matter-to-data-science-and-how-can-this-problem-be-reduced?"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Creating samples is a necessary part of building predictive models, but data scientists must be careful to build their data sets without bias. &lt;a href="https://www.technologyreview.com/s/607955/inspecting-algorithms-for-bias/"&gt;Predictive algorithms are already being used by courts, bank, and other institutions to make decisions about our lives&lt;/a&gt;, so the stakes for preventing selection bias involves the livelihood of citizens data science means to help. The problem is that to a modeling algorithm, the sample given is the only "world" it sees and will make decisions with or without bias. If data scientists end up using a biased sample, their conclusions can be inaccurate and even harmful to a society increasingly reliant on predictive algorithms.&lt;/p&gt;
-&lt;p&gt;In order to reduce the harmful consequences of selection bias, I propose three effective and practical strategies:&lt;/p&gt;
+&lt;blockquote class="blockquote"&gt;&lt;p&gt;"Very little is needed to make a happy life; it is all within yourself, in your way of thinking."
+-Marcus Aurelius&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="What-is-Stoicism?"&gt;What is Stoicism?&lt;a class="anchor-link" href="#What-is-Stoicism?"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;hr/&gt;
+&lt;p&gt;Stoicism is an ancient philosophy founded in the early 3rd century BC that focused on practical ways to live a better life. It is one of the main practical philosophies out there and is more of a practice or way of life than a philosophy.&lt;/p&gt;
+&lt;p&gt;The main Stoics whose writings still survive today are Lucius Seneca (One of the richest merchants in Rome), Epictetus (A Roman slave), and Marcus Aurelius (A 
+Roman Emperor). That is a pretty wide range of people, and it shows that this philosophy can benefit nearly everyone, and it has for thousands of years. George Washington started studying Stoicism when he was 17 and Thomas Jefferson had a copy of Seneca on his nightstand when he died!&lt;/p&gt;
+&lt;p&gt;Stoicism really shines at developing a state of mind that is immune against what is going on around us. It is so effective at improving how we see the world that it &lt;a href="https://bigthink.com/mind-brain/cbt-stoicism"&gt;serves as the foundation of Cognitive Behavioral Therapy (CBT)&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="What-Are-Some-Core-Stoic-Practices?"&gt;What Are Some Core Stoic Practices?&lt;a class="anchor-link" href="#What-Are-Some-Core-Stoic-Practices?"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;hr/&gt;
 &lt;ol&gt;
-&lt;li&gt;Built datasets must closes represent the population of interest. A way to do this is through a &lt;a href="https://en.wikipedia.org/wiki/Stratified_sampling"&gt;stratified sample&lt;/a&gt;, where each important input category in the data is sampled separately and then those subsets are joined according to their correct proportions. &lt;/li&gt;
-&lt;li&gt;The sampling strategy of the data should be documented so that limitations of its collection can be communicated and selection bias can be looked for once the model is built. &lt;/li&gt;
-&lt;li&gt;Predictive models should be regularly reviewed after being deployed. A natural change in the population over time could decrease performance and increase bias in the model.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;The Dichotomy of Control&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" class="img-fluid" src="control_dichotomy.png"/&gt;&lt;/p&gt;
+&lt;p&gt;The concept of control is one of the key elements of Stoicism. This model explains that some things are within our control and some things are not.&lt;/p&gt;
+&lt;p&gt;Within our control are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Our thoughts&lt;/li&gt;
+&lt;li&gt;Our beliefs&lt;/li&gt;
+&lt;li&gt;Our values&lt;/li&gt;
+&lt;li&gt;Our actions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Outside our control is pretty much everything else:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Other people&lt;/li&gt;
+&lt;li&gt;The weather&lt;/li&gt;
+&lt;li&gt;The economy&lt;/li&gt;
+&lt;li&gt;A pandemic that forces all of us to stay home and take Zoom classes&lt;/li&gt;
+&lt;li&gt;Politics&lt;/li&gt;
+&lt;li&gt;What other people think of us&lt;/li&gt;
+&lt;li&gt;Our past&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;etc.&lt;/p&gt;
+&lt;p&gt;Things outside of our control will not change, regardless of how much we scream in traffic. We can, however, choose how we will react to an event. When we commit to stop wasting our emotional energy and time on things that are outside of our control, we are suddenly freed up to focus on what is truly important in our lives.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Through these methods, selection bias can be reduced so that society can expect to benefit, not be harmed, from advances in data science.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Amor Fati&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote class="blockquote"&gt;&lt;p&gt;"My formula for greatness in a human being is amor fati: that one wants nothing to be other than it is, not in the future, not in the past, not in all eternity." -Friedrich Nietzsche&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Amor Fati roughly translates to a "love of fate" or "love of one's fate." It is the idea that we need to accept and embrace all the good and bad that has happened in our lives and the world. We shouldn't wish for our lives to have been any different because that is out of our control. All of the conditions of the past were needed for you to be right where you are now.&lt;/p&gt;
+&lt;p&gt;So, you can wish to change many events about your past, or you can use your ability to re-tell your past and assign meaning and purpose to all that has happened to get you to where you are today. Turn the past and present into something positive. We don't have many years of life to experience, so we might as well love what we choose. And that leads us into our last concept...&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Memento Mori&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote class="blockquote"&gt;&lt;p&gt;"You could leave life right now. Let that determine what you do and say and think." -Marcus Aurelius&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Memento Mori translates to 'remember that you must die.' Ah yes, Death. It's something that's usually ignored and not talked about in our modern-day and is often pretty uncomfortable to think about. Despite this, there is a benefit to be had from realizing that our time is limited, and eventually, this roller coaster of existence will have an end. Reminding yourself of this can hugely improve how we live our day-to-day.&lt;/p&gt;
+&lt;p&gt;If you would humor me, Imagine that you are just told that you have a week to live. I would bet that you would have a laundry list of things that you would want to do, people you want to spend time with, and places to visit. All of a sudden, you can clarify what's important. It's too easy to forget this trip has an end, and if you can remember that it does you can fill much more of your time with what matters to you.&lt;/p&gt;
+&lt;h2 id="How-Can-Stoicism-Make-Your-Life-Better?"&gt;How Can Stoicism Make Your Life Better?&lt;a class="anchor-link" href="#How-Can-Stoicism-Make-Your-Life-Better?"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;hr/&gt;
+&lt;p&gt;Among many of Stoicism's benefits are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;making you immune to events outside your control&lt;/li&gt;
+&lt;li&gt;clarifying what is important in your life&lt;/li&gt;
+&lt;li&gt;making you happier on the day-to-day.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;At the end of the day, Stoicism serves to improve your well-being and reduce needless day to day suffering. It has helped me personally to realize that there is so much that I used to worry and care about outside of my control that had no impact on my life at all. So much of life is out of our hands, but that allows us the opportunity to leverage that tiny sliver of life we do control, our thoughts and actions, to live a better life.&lt;/p&gt;
+&lt;hr/&gt;
+&lt;p&gt;There are many more concepts, practices, and pieces of advice that Stoicism has to offer, but I aimed to give a good general introduction to this philosophy. Hopefully, you found something useful in this post.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1021,4 +1065,4 @@ h6:hover .anchor-link {
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="storytelling"></category><category term="selection bias"></category></entry></feed>
+</content><category term="stoicism"></category><category term="introduction"></category></entry></feed>
