@@ -977,7 +977,7 @@ h6:hover .anchor-link {
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;To understand why humans make bad decisions at times, we have to understand the purpose of emotions. Imagine that you are in a jungle 25,000 years ago and you spot a tiger stalking you.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="tiger_stalking" class="img-fluid" src="tiger_stalking.jpg"/&gt;&lt;/p&gt;
-&lt;p&gt;Do you want to start making a pros and cons list of what to do and way all of your options carefully? Of course not, you would be dead before you got to write down the second pro on your whiteboard. What you would want was an automatic decision-making system that could make a split-second decision to turn your tail and run before you had time to think. In comes emotions to the rescue, generating a strong feeling to act before the rational mind could process what was going on. Emotions kept our ancestors alive from immediate threats while their rational mind planned for the future. This duality of decision-making between non-conscious reactions and conscious thought leads us to the first reason you make bad decisions:&lt;/p&gt;
+&lt;p&gt;Do you want to start making a pros and cons list of what to do and weigh all of your options carefully? Of course not, you would be dead before you got to write down the second pro on your whiteboard. What you would want was an automatic decision-making system that could make a split-second decision to turn your tail and run before you had time to think. In comes emotions to the rescue, generating a strong feeling to act before the rational mind could process what was going on. Emotions kept our ancestors alive from immediate threats while their rational mind planned for the future. This duality of decision-making between non-conscious reactions and conscious thought leads us to the first reason you make bad decisions:&lt;/p&gt;
 &lt;h3 id="1.-Humans-are-of-two-minds"&gt;1. Humans are of two minds&lt;a class="anchor-link" href="#1.-Humans-are-of-two-minds"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img alt="mind_heart" class="img-fluid" src="mind_heart.webp"/&gt;
 Daniel Kahneman, a Nobel prize winner for his research about human judgment and decision-making, created a dual-system framework to explain why our decisions are often not rational. &lt;a href="https://www.behavioraleconomics.com/resources/introduction-behavioral-economics/"&gt;System 1 consists of thinking processes that are intuitive, automatic, experience-based, and relatively unconscious. System 2 is more reflective, controlled, deliberative, and analytical.&lt;/a&gt; In general, System 1 is something like a gut feeling from first impressions while System 2 is the rational babysitter that keeps a check on our behavior (often unsuccessfully). While emotions serve an important role in decision-making, we can be carried away by them if we let them.&lt;/p&gt;
 &lt;h3 id="2.-Humans-are-limited-beings"&gt;2. Humans are limited beings&lt;a class="anchor-link" href="#2.-Humans-are-limited-beings"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img alt="tired" class="img-fluid" src="tired.png"/&gt;&lt;/p&gt;
@@ -2081,10 +2081,10 @@ These "feelings" are important because economic agents are simply humans and eco
 &lt;div class="output"&gt;
 &lt;div class="output_area"&gt;
 &lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div id="b1c28423-13dd-4b7e-89dd-4255803bb7d0"&gt;&lt;/div&gt;
+&lt;div id="159d460a-790e-4ce1-a316-8136f02e1ae1"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#b1c28423-13dd-4b7e-89dd-4255803bb7d0');
+var element = $('#159d460a-790e-4ce1-a316-8136f02e1ae1');
 
 (function(root) {
   function now() {
@@ -3255,10 +3255,10 @@ var element = $('#b1c28423-13dd-4b7e-89dd-4255803bb7d0');
 &lt;/div&gt;
 &lt;div class="output_area"&gt;
 &lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div id="d851609e-8792-4126-a87e-189525afdd6d"&gt;&lt;/div&gt;
+&lt;div id="a7d73bd8-6b58-4ea8-ada3-eea618ce06e6"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#d851609e-8792-4126-a87e-189525afdd6d');
+var element = $('#a7d73bd8-6b58-4ea8-ada3-eea618ce06e6');
 
 if ((window.PyViz === undefined) || (window.PyViz instanceof HTMLElement)) {
   window.PyViz = {comms: {}, comm_status:{}, kernels:{}, receivers: {}, plot_index: []}
@@ -3499,7 +3499,7 @@ if (window.Jupyter !== undefined) {
         text-align: right;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table table-hover table-striped dataframe"&gt;
+&lt;table border="1" class="dataframe table-hover table table-striped"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -3632,7 +3632,7 @@ if (window.Jupyter !== undefined) {
         text-align: right;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table table-hover table-striped dataframe"&gt;
+&lt;table border="1" class="dataframe table-hover table table-striped"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -3822,7 +3822,7 @@ dtype: int64&lt;/pre&gt;
         text-align: right;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table table-hover table-striped dataframe"&gt;
+&lt;table border="1" class="dataframe table-hover table table-striped"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -4334,7 +4334,7 @@ dtype: int64&lt;/pre&gt;
         text-align: right;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table table-hover table-striped dataframe"&gt;
+&lt;table border="1" class="dataframe table-hover table table-striped"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -4408,7 +4408,7 @@ dtype: int64&lt;/pre&gt;
         text-align: right;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table table-hover table-striped dataframe"&gt;
+&lt;table border="1" class="dataframe table-hover table table-striped"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -4557,7 +4557,7 @@ dtype: int64&lt;/pre&gt;
         text-align: right;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table table-hover table-striped dataframe"&gt;
+&lt;table border="1" class="dataframe table-hover table table-striped"&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -4768,7 +4768,7 @@ dtype: int64&lt;/pre&gt;
         text-align: right;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table table-hover table-striped dataframe"&gt;
+&lt;table border="1" class="dataframe table-hover table table-striped"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -4962,7 +4962,7 @@ dtype: int64&lt;/pre&gt;
         text-align: right;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table table-hover table-striped dataframe"&gt;
+&lt;table border="1" class="dataframe table-hover table table-striped"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
