@@ -2081,10 +2081,10 @@ These "feelings" are important because economic agents are simply humans and eco
 &lt;div class="output"&gt;
 &lt;div class="output_area"&gt;
 &lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div id="8c578d70-9bda-4eb0-9651-ee8ec775b726"&gt;&lt;/div&gt;
+&lt;div id="08ecb501-b3e8-4026-b4b6-4b6271312885"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#8c578d70-9bda-4eb0-9651-ee8ec775b726');
+var element = $('#08ecb501-b3e8-4026-b4b6-4b6271312885');
 
 (function(root) {
   function now() {
@@ -3255,10 +3255,10 @@ var element = $('#8c578d70-9bda-4eb0-9651-ee8ec775b726');
 &lt;/div&gt;
 &lt;div class="output_area"&gt;
 &lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div id="953b0c65-6aa7-46f5-83fe-38cf09d48e8d"&gt;&lt;/div&gt;
+&lt;div id="7df4a694-7105-4de2-b41f-aac4264174a8"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_javascript "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#953b0c65-6aa7-46f5-83fe-38cf09d48e8d');
+var element = $('#7df4a694-7105-4de2-b41f-aac4264174a8');
 
 if ((window.PyViz === undefined) || (window.PyViz instanceof HTMLElement)) {
   window.PyViz = {comms: {}, comm_status:{}, kernels:{}, receivers: {}, plot_index: []}
@@ -3499,7 +3499,7 @@ if (window.Jupyter !== undefined) {
         text-align: right;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table-striped table table-hover dataframe"&gt;
+&lt;table border="1" class="dataframe table-hover table table-striped"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -3632,7 +3632,7 @@ if (window.Jupyter !== undefined) {
         text-align: right;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table-striped table table-hover dataframe"&gt;
+&lt;table border="1" class="dataframe table-hover table table-striped"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -3822,7 +3822,7 @@ dtype: int64&lt;/pre&gt;
         text-align: right;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table-striped table table-hover dataframe"&gt;
+&lt;table border="1" class="dataframe table-hover table table-striped"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -4334,7 +4334,7 @@ dtype: int64&lt;/pre&gt;
         text-align: right;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table-striped table table-hover dataframe"&gt;
+&lt;table border="1" class="dataframe table-hover table table-striped"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -4408,7 +4408,7 @@ dtype: int64&lt;/pre&gt;
         text-align: right;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table-striped table table-hover dataframe"&gt;
+&lt;table border="1" class="dataframe table-hover table table-striped"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -4557,7 +4557,7 @@ dtype: int64&lt;/pre&gt;
         text-align: right;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table-striped table table-hover dataframe"&gt;
+&lt;table border="1" class="dataframe table-hover table table-striped"&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -4768,7 +4768,7 @@ dtype: int64&lt;/pre&gt;
         text-align: right;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table-striped table table-hover dataframe"&gt;
+&lt;table border="1" class="dataframe table-hover table table-striped"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -4962,7 +4962,7 @@ dtype: int64&lt;/pre&gt;
         text-align: right;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table-striped table table-hover dataframe"&gt;
+&lt;table border="1" class="dataframe table-hover table table-striped"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
